@@ -1,11 +1,6 @@
-# acá va tu código
+from palindromo import es_palindromo
 
-
-def es_palindromo(string: str) -> bool:
-    return False
-
-
-# --- a partir de acá no le des bola al código ---
+# --- no le des bola a este código ---
 
 import unittest
 
