@@ -1,5 +1,6 @@
 from palindromo import es_palindromo
 from numeros_primos import es_numero_primo
+from lista import numero_maximo
 
 # --- no le des bola a este código ---
 
@@ -20,16 +21,25 @@ class Tests(unittest.TestCase):
         self.assertFalse(es_palindromo("tu vieja"))
 
     def test_numeros_primos(self):
-        self.assertTrue(89)
-        self.assertTrue(67)
-        self.assertTrue(43)
-        self.assertTrue(31)
-        self.assertTrue(167)
-        self.assertFalse(10)
-        self.assertFalse(12)
-        self.assertFalse(32)
-        self.assertFalse(25)
-        self.assertFalse(55)
+        self.assertTrue(es_numero_primo(89), 89)
+        self.assertTrue(es_numero_primo(67), 67)
+        self.assertTrue(es_numero_primo(43), 43)
+        self.assertTrue(es_numero_primo(31), 31)
+        self.assertTrue(es_numero_primo(167), 167)
+        self.assertFalse(es_numero_primo(10), 10)
+        self.assertFalse(es_numero_primo(12), 12)
+        self.assertFalse(es_numero_primo(32), 32)
+        self.assertFalse(es_numero_primo(25), 25)
+        self.assertFalse(es_numero_primo(55), 55)
+
+    def test_numeros_maximos(self):
+        self.assertEqual(numero_maximo([0, 4, 87, 11, 22, 3]), 87)
+        self.assertEqual(numero_maximo([978, 4, 87, 767, 22]), 978)
+        self.assertEqual(numero_maximo([2202, 12000, 827, 50, 23, 443, 221]), 12000)
+        self.assertEqual(numero_maximo([0, 2000, 87]), 2000)
+
+    def test_ordenar_diccionario(self):
+        pass
 
 
 if __name__ == "__main__":
