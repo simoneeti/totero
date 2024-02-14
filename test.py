@@ -21,16 +21,16 @@ class Tests(unittest.TestCase):
         self.assertFalse(es_palindromo("tu vieja"))
 
     def test_numeros_primos(self):
-        self.assertTrue(es_numero_primo(89), 89)
-        self.assertTrue(es_numero_primo(67), 67)
-        self.assertTrue(es_numero_primo(43), 43)
-        self.assertTrue(es_numero_primo(31), 31)
-        self.assertTrue(es_numero_primo(167), 167)
-        self.assertFalse(es_numero_primo(10), 10)
-        self.assertFalse(es_numero_primo(12), 12)
-        self.assertFalse(es_numero_primo(32), 32)
-        self.assertFalse(es_numero_primo(25), 25)
-        self.assertFalse(es_numero_primo(55), 55)
+        self.assertTrue(es_numero_primo(89))
+        self.assertTrue(es_numero_primo(67))
+        self.assertTrue(es_numero_primo(43))
+        self.assertTrue(es_numero_primo(31))
+        self.assertTrue(es_numero_primo(167))
+        self.assertFalse(es_numero_primo(10))
+        self.assertFalse(es_numero_primo(12))
+        self.assertFalse(es_numero_primo(32))
+        self.assertFalse(es_numero_primo(25))
+        self.assertFalse(es_numero_primo(55))
 
     def test_numeros_maximos(self):
         self.assertEqual(numero_maximo([0, 4, 87, 11, 22, 3]), 87)
