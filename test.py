@@ -1,4 +1,5 @@
 from palindromo import es_palindromo
+from numeros_primos import es_numero_primo
 
 # --- no le des bola a este código ---
 
@@ -17,6 +18,18 @@ class Tests(unittest.TestCase):
         self.assertFalse(es_palindromo("ssa22sd"))
         self.assertFalse(es_palindromo("asdasdasddd"))
         self.assertFalse(es_palindromo("tu vieja"))
+
+    def test_numeros_primos(self):
+        self.assertTrue(89)
+        self.assertTrue(67)
+        self.assertTrue(43)
+        self.assertTrue(31)
+        self.assertTrue(167)
+        self.assertFalse(10)
+        self.assertFalse(12)
+        self.assertFalse(32)
+        self.assertFalse(25)
+        self.assertFalse(55)
 
 
 if __name__ == "__main__":
